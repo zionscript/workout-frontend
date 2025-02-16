@@ -6,17 +6,17 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    min-height: 100svh;
+    padding: 50px 70px 70px 100px;
+    gap: 64px;
+    font-family: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;
     --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
@@ -25,7 +25,7 @@
     --button-primary-hover: #ccc;
     --button-secondary-hover: #1a1a1a;
   }
-}
+} */
 
 .main {
   display: flex;
@@ -55,6 +55,46 @@
   border-radius: 4px;
   font-weight: 600;
 }
+/* navbar */
+.navbarSection > .navbarContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbarContent > p {
+  /* font-size: 16px; */
+  font-weight: bold;
+}
+.navbarContent > ul {
+  list-style: none;
+  gap: 20px;
+}
+
+/* first content */
+.firstContent > img {
+    position: absolute;
+    right: 171px;
+    top: 110px;
+}
+
+.textHeading {
+  display: inline-block;
+  font-family: var(--font-roboto);
+  font-size: 10rem;
+  font-weight: 900;
+}
+
+.textDescription {
+  width: 560px;
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: 0.5;
+  line-height: 24px;
+
+  color: #efede880;
+}
+
+
 
 .ctas {
   display: flex;
@@ -63,8 +103,9 @@
 
 .ctas a {
   appearance: none;
-  border-radius: 128px;
-  height: 48px;
+  border-radius: 10px;
+  width: 200px;
+  height: 70px;
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
@@ -82,7 +123,7 @@
 }
 
 a.primary {
-  background: var(--foreground);
+  background: var(--primary);
   color: var(--background);
   gap: 8px;
 }
@@ -161,8 +202,8 @@ a.secondary {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .logo {
     filter: invert();
   }
-}
+} */
